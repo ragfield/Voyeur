@@ -86,7 +86,6 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [super dealloc];
 }
 
 - (void)windowDidLoad
@@ -122,7 +121,6 @@
 	    image = [[NSImage alloc] init];
 	    [image addRepresentation:[node image]];
 	    [imageView setImage:image];
-	    [image release];
 	} else {
 	    [imageView setImage:nil];
 	}

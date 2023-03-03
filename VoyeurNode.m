@@ -83,14 +83,6 @@ static NSBitmapImageRep *getImage(CGPDFObjectRef);
     return self;
 }
 
-- (void)dealloc
-{
-    [name release];
-    [image release];
-    [children release];
-    [super dealloc];
-}
-
 - (NSString *)name
 {
     return name;
@@ -157,7 +149,7 @@ static NSBitmapImageRep *getImage(CGPDFObjectRef);
 			
     case kCGPDFObjectTypeString:
 	CGPDFObjectGetValue(object, type, &string);
-	return [(NSString *)CGPDFStringCopyTextString(string) autorelease];
+	return (__bridge_transfer NSString *)CGPDFStringCopyTextString(string);
 			
     case kCGPDFObjectTypeArray:
     case kCGPDFObjectTypeDictionary:
@@ -176,8 +168,7 @@ static NSBitmapImageRep *getImage(CGPDFObjectRef);
 - (void)setImage:(NSBitmapImageRep *)newImage
 {
     if (image != newImage) {
-	[image release];
-	image = [newImage retain];
+		image = newImage;
     }
 }
 
@@ -188,14 +179,12 @@ addItems(const char *key, CGPDFObjectRef object, void *info)
     NSMutableArray *children;
     VoyeurNode *node;
 	
-    children = info;
+    children = (__bridge NSMutableArray*)info;
     string = [[NSString alloc] initWithFormat:@"/%s", key];
     node = [[VoyeurNode alloc] initWithObject:object name:string];
     if (node != nil) {
 	[children addObject:node];
-	[node release];
     }
-    [string release];
 }
 
 - (NSArray *)children
@@ -222,9 +211,7 @@ addItems(const char *key, CGPDFObjectRef object, void *info)
 	    node = [[VoyeurNode alloc] initWithObject:obj name:string];
 	    if (node != nil) {
 		[children addObject:node];
-		[node release];
 	    }
-	    [string release];
 	}
 	break;
 			
@@ -236,7 +223,7 @@ addItems(const char *key, CGPDFObjectRef object, void *info)
 	}
 	count = CGPDFDictionaryGetCount(dict);
 	children = [[NSMutableArray alloc] initWithCapacity:count];
-	CGPDFDictionaryApplyFunction(dict, &addItems, children);
+	CGPDFDictionaryApplyFunction(dict, &addItems, (__bridge CFMutableArrayRef)children);
 	break;
 			
     case kCGPDFObjectTypeStream:
@@ -244,7 +231,7 @@ addItems(const char *key, CGPDFObjectRef object, void *info)
 	dict = CGPDFStreamGetDictionary(stream);
 	count = CGPDFDictionaryGetCount(dict);
 	children = [[NSMutableArray alloc] initWithCapacity:count];
-	CGPDFDictionaryApplyFunction(dict, &addItems, children);
+	CGPDFDictionaryApplyFunction(dict, &addItems, (__bridge CFMutableArrayRef)children);
 	break;
 			
     default:
@@ -301,7 +288,7 @@ addItems(const char *key, CGPDFObjectRef object, void *info)
     }
     [string appendString:@"]"];
 	
-    return [string autorelease];
+    return string;
 }
 
 - (NSAttributedString *)dictionaryInfo
@@ -348,7 +335,7 @@ addItems(const char *key, CGPDFObjectRef object, void *info)
     }
     [string appendString:@">>"];
 	
-    return [string autorelease];
+    return string;
 }
 
 - (NSAttributedString *)streamInfo
@@ -359,7 +346,7 @@ addItems(const char *key, CGPDFObjectRef object, void *info)
     CGPDFDataFormat constant;
 	
     CGPDFObjectGetValue(object, kCGPDFObjectTypeStream, &stream);
-    data = (NSData *)CGPDFStreamCopyData(stream, &constant);
+    data = (__bridge_transfer NSData *)CGPDFStreamCopyData(stream, &constant);
     string = [NSString stringWithData:data encoding:NSASCIIStringEncoding];
     return [NSAttributedString attributedStringWithString:string];
 }

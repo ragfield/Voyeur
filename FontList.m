@@ -58,17 +58,17 @@ parseFont(const char *key, CGPDFObjectRef object, void *info)
     CGPDFDictionaryRef dict, descriptor;
     NSString *baseFont, *fontType, *encoding;
 
-    fonts = info;
+    fonts = (__bridge NSMutableDictionary *)info;
 
     if (!CGPDFObjectGetValue(object, kCGPDFObjectTypeDictionary, &dict))
 	return;
 
     baseFont = @"<< none >>";
     if (CGPDFDictionaryGetName(dict, "BaseFont", &name))
-	baseFont = [NSString stringWithCString:name];
+	baseFont = [NSString stringWithCString:name encoding:NSISOLatin1StringEncoding];
     fontType = @"<< unknown >>";
     if (CGPDFDictionaryGetName(dict, "Subtype", &name))
-	fontType = [NSString stringWithCString: name];
+	fontType = [NSString stringWithCString: name encoding:NSISOLatin1StringEncoding];
 	
     isEmbedded = false;
     if (CGPDFDictionaryGetDictionary(dict, "FontDescriptor", &descriptor)) {
@@ -81,12 +81,11 @@ parseFont(const char *key, CGPDFObjectRef object, void *info)
 
     encoding = @"<< font-specific >>";
     if (CGPDFDictionaryGetName(dict, "Encoding", &name))
-	encoding = [NSString stringWithCString:name];
+	encoding = [NSString stringWithCString:name encoding:NSISOLatin1StringEncoding];
 
     font = [[VoyeurFont alloc] initWithBaseFont:baseFont type:fontType
 			       encoding:encoding isEmbedded:isEmbedded];
     [fonts setObject:font forKey:baseFont];
-    [font release];
 }
 
 @implementation FontList
@@ -102,12 +101,6 @@ parseFont(const char *key, CGPDFObjectRef object, void *info)
     return self;
 }
 
-- (void)dealloc
-{
-    [fonts release];
-    [super dealloc];
-}
-
 - (void)addFontsFromPage:(CGPDFPageRef)page
 {
     CGPDFDictionaryRef dict, resources, pageFonts;
@@ -117,12 +110,12 @@ parseFont(const char *key, CGPDFObjectRef object, void *info)
 	return;
     if (!CGPDFDictionaryGetDictionary(resources, "Font", &pageFonts))
 	return;
-    CGPDFDictionaryApplyFunction(pageFonts, &parseFont, fonts);
+    CGPDFDictionaryApplyFunction(pageFonts, &parseFont, (__bridge CFMutableDictionaryRef)fonts);
 }
 
 - (NSMutableAttributedString *)info
 {
-    int k, count;
+    NSInteger k, count;
     NSString *key;
     NSArray *array;
     NSAttributedString *fontString;
@@ -138,7 +131,7 @@ parseFont(const char *key, CGPDFObjectRef object, void *info)
 	[string appendAttributedString: fontString];
 	[string appendString:@"\n"];
     }
-    return [string autorelease];
+    return string;
 }
 
 @end

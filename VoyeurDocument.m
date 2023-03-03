@@ -69,8 +69,6 @@ NSString *VoyeurNodeChangedNotification = @"VoyeurNodeChangedNotification";
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     CGPDFDocumentRelease(document);
-    [dataSource release];
-    [super dealloc];
 }
 
 - (NSString *)windowNibName
@@ -110,8 +108,8 @@ dataProviderWithCFData(CFDataRef data)
 {
     void *info;
     size_t size;
-    static const CGDataProviderDirectAccessCallbacks callbacks = {
-	&getCFDataBytePointer, NULL, NULL, &releaseCFData
+    const CGDataProviderDirectCallbacks callbacks = {
+	0, getCFDataBytePointer, NULL, NULL, releaseCFData
     };
 
     if (data == NULL)
@@ -119,15 +117,15 @@ dataProviderWithCFData(CFDataRef data)
 
     size = CFDataGetLength(data);
     info = (void *)CFRetain(data);
-    return CGDataProviderCreateDirectAccess(info, size, &callbacks);
+    return CGDataProviderCreateDirect(info, size, &callbacks);
 }
 
-- (BOOL)loadDataRepresentation:(NSData *)data ofType:(NSString *)type
+- (BOOL)readFromData:(NSData *)data ofType:(NSString *)type error:(NSError **)outError
 {
     CGDataProviderRef provider;
 
     if ([type isEqualToString:@"PDFType"]) {
-	provider = dataProviderWithCFData((CFDataRef)data);
+	provider = dataProviderWithCFData((__bridge CFDataRef)data);
 	if (data == NULL)
 	    return NO;
 	document = CGPDFDocumentCreateWithProvider(provider);
@@ -167,7 +165,7 @@ setCGPDFStringValue(NSTextField *field, CGPDFStringRef string)
 
     s = CGPDFStringCopyTextString(string);
     if (s != NULL) {
-	[field setStringValue:(NSString *)s];
+	[field setStringValue:(__bridge NSString *)s];
 	CFRelease(s);
     }
 }
@@ -179,7 +177,7 @@ setCGPDFStringValueAsDate(NSTextField *field, CGPDFStringRef string)
 
     date = CGPDFStringCopyDate(string);
     if (date != NULL) {
-	[field setStringValue:[(NSDate *)date description]];
+	[field setStringValue:[(__bridge NSDate *)date description]];
 	CFRelease(date);
     }
 }
@@ -195,7 +193,7 @@ setCGPDFStringValueAsDate(NSTextField *field, CGPDFStringRef string)
 	[NSString stringWithFormat:@"%d.%d", majorVersion, minorVersion]];
     [encryptedField setStringValue:
 	CGPDFDocumentIsEncrypted(document) ? @"Yes" : @"No"];
-    [pagesField setIntValue:CGPDFDocumentGetNumberOfPages(document)];
+    [pagesField setIntegerValue:CGPDFDocumentGetNumberOfPages(document)];
 	
     infoDict = CGPDFDocumentGetInfo(document);
     if (CGPDFDictionaryGetString(infoDict, "Title", &string))
@@ -218,7 +216,7 @@ setCGPDFStringValueAsDate(NSTextField *field, CGPDFStringRef string)
 
 - (void)selectionChanged:(NSNotification *)notification
 {
-    int row;
+    NSInteger row;
     
     row = [[notification object] selectedRow];
     selectedNode = [[notification object] itemAtRow:row];

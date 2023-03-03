@@ -53,7 +53,7 @@
 
 + (NSString *)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding
 {
-    return [[[self alloc] initWithData:data encoding:encoding] autorelease];
+    return [[self alloc] initWithData:data encoding:encoding];
 }
 
 - (NSAttributedString *)italicize
@@ -65,7 +65,7 @@
     font = [NSFont fontWithName:@"Helvetica-Oblique" size:14];
     attr = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
     string = [[NSAttributedString alloc] initWithString:self attributes:attr];
-    return [string autorelease];
+    return string;
 }
 
 @end
@@ -78,7 +78,7 @@
 
     s = [[NSMutableAttributedString alloc] init];
     [s appendString:string];
-    return [s autorelease];
+    return s;
 }
 
 @end
@@ -95,7 +95,6 @@
     attr = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
     s = [[NSAttributedString alloc] initWithString:string attributes:attr];
     [self appendAttributedString:s];
-    [s release];
 }
 
 @end

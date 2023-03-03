@@ -48,7 +48,7 @@
 #import "VoyeurNode.h"
 #import "FontList.h"
 
-@interface VoyeurDataSource : NSObject
+@interface VoyeurDataSource : NSObject<NSOutlineViewDataSource>
 {
     CGPDFDocumentRef document;
     CGPDFDictionaryRef catalog;

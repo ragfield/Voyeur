@@ -64,14 +64,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [baseFont release];
-    [type release];
-    [encoding release];
-    [super dealloc];
-}
-
 - (NSString *)name
 {
     return baseFont;
@@ -116,8 +108,7 @@
     }
     infoString = [[NSAttributedString alloc] initWithString:string
 		     attributes:attributes];
-    [string release];
-    return [infoString autorelease];
+    return infoString;
 }
 
 @end

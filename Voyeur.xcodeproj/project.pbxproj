@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53C1B6F329B25F5400474CB9 /* VoyeurApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B6F229B25F5400474CB9 /* VoyeurApp.m */; };
+		53C1B6F829B25F5500474CB9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C1B6F629B25F5500474CB9 /* MainMenu.xib */; };
+		53C1B6FA29B25F5500474CB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B6F929B25F5500474CB9 /* main.m */; };
+		53C1B70B29B2602300474CB9 /* VoyeurDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B70229B2602100474CB9 /* VoyeurDataSource.m */; };
+		53C1B70C29B2602300474CB9 /* VoyeurAppKitExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B70329B2602100474CB9 /* VoyeurAppKitExtras.m */; };
+		53C1B70D29B2602300474CB9 /* VoyeurDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B70429B2602200474CB9 /* VoyeurDocument.m */; };
+		53C1B70E29B2602300474CB9 /* VoyeurFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B70629B2602200474CB9 /* VoyeurFont.m */; };
+		53C1B70F29B2602300474CB9 /* VoyeurNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B70A29B2602200474CB9 /* VoyeurNode.m */; };
+		53C1B71229B2633000474CB9 /* InfoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B71029B2633000474CB9 /* InfoWindowController.m */; };
+		53C1B71529B2638E00474CB9 /* FontList.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1B71429B2638E00474CB9 /* FontList.m */; };
+		53C1B71D29B26BDE00474CB9 /* InfoWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C1B71929B26BDE00474CB9 /* InfoWindowController.xib */; };
+		53C1B71E29B26BDE00474CB9 /* VoyeurDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C1B71B29B26BDE00474CB9 /* VoyeurDocument.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		53C1B6EE29B25F5400474CB9 /* Voyeur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voyeur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C1B6F129B25F5400474CB9 /* VoyeurApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoyeurApp.h; sourceTree = "<group>"; };
+		53C1B6F229B25F5400474CB9 /* VoyeurApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoyeurApp.m; sourceTree = "<group>"; };
+		53C1B6F729B25F5500474CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		53C1B6F929B25F5500474CB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53C1B6FB29B25F5500474CB9 /* Voyeur.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Voyeur.entitlements; sourceTree = "<group>"; };
+		53C1B70129B2602100474CB9 /* VoyeurDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoyeurDataSource.h; sourceTree = "<group>"; };
+		53C1B70229B2602100474CB9 /* VoyeurDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoyeurDataSource.m; sourceTree = "<group>"; };
+		53C1B70329B2602100474CB9 /* VoyeurAppKitExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoyeurAppKitExtras.m; sourceTree = "<group>"; };
+		53C1B70429B2602200474CB9 /* VoyeurDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoyeurDocument.m; sourceTree = "<group>"; };
+		53C1B70529B2602200474CB9 /* VoyeurFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoyeurFont.h; sourceTree = "<group>"; };
+		53C1B70629B2602200474CB9 /* VoyeurFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoyeurFont.m; sourceTree = "<group>"; };
+		53C1B70729B2602200474CB9 /* VoyeurNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoyeurNode.h; sourceTree = "<group>"; };
+		53C1B70829B2602200474CB9 /* VoyeurDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoyeurDocument.h; sourceTree = "<group>"; };
+		53C1B70929B2602200474CB9 /* VoyeurAppKitExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoyeurAppKitExtras.h; sourceTree = "<group>"; };
+		53C1B70A29B2602200474CB9 /* VoyeurNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoyeurNode.m; sourceTree = "<group>"; };
+		53C1B71029B2633000474CB9 /* InfoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoWindowController.m; sourceTree = "<group>"; };
+		53C1B71129B2633000474CB9 /* InfoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoWindowController.h; sourceTree = "<group>"; };
+		53C1B71329B2638E00474CB9 /* FontList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontList.h; sourceTree = "<group>"; };
+		53C1B71429B2638E00474CB9 /* FontList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontList.m; sourceTree = "<group>"; };
+		53C1B71A29B26BDE00474CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/InfoWindowController.xib; sourceTree = "<group>"; };
+		53C1B71C29B26BDE00474CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VoyeurDocument.xib; sourceTree = "<group>"; };
+		53C1B71F29B26DBF00474CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53C1B6EB29B25F5400474CB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53C1B6E529B25F5400474CB9 = {
+			isa = PBXGroup;
+			children = (
+				53C1B6EF29B25F5400474CB9 /* Products */,
+				53C1B6F029B25F5400474CB9 /* Voyeur */,
+			);
+			sourceTree = "<group>";
+		};
+		53C1B6EF29B25F5400474CB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53C1B6EE29B25F5400474CB9 /* Voyeur.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53C1B6F029B25F5400474CB9 /* Voyeur */ = {
+			isa = PBXGroup;
+			children = (
+				53C1B71329B2638E00474CB9 /* FontList.h */,
+				53C1B71429B2638E00474CB9 /* FontList.m */,
+				53C1B71F29B26DBF00474CB9 /* Info.plist */,
+				53C1B71129B2633000474CB9 /* InfoWindowController.h */,
+				53C1B71029B2633000474CB9 /* InfoWindowController.m */,
+				53C1B71929B26BDE00474CB9 /* InfoWindowController.xib */,
+				53C1B6F929B25F5500474CB9 /* main.m */,
+				53C1B6F629B25F5500474CB9 /* MainMenu.xib */,
+				53C1B6FB29B25F5500474CB9 /* Voyeur.entitlements */,
+				53C1B6F129B25F5400474CB9 /* VoyeurApp.h */,
+				53C1B6F229B25F5400474CB9 /* VoyeurApp.m */,
+				53C1B70929B2602200474CB9 /* VoyeurAppKitExtras.h */,
+				53C1B70329B2602100474CB9 /* VoyeurAppKitExtras.m */,
+				53C1B70129B2602100474CB9 /* VoyeurDataSource.h */,
+				53C1B70229B2602100474CB9 /* VoyeurDataSource.m */,
+				53C1B70829B2602200474CB9 /* VoyeurDocument.h */,
+				53C1B70429B2602200474CB9 /* VoyeurDocument.m */,
+				53C1B71B29B26BDE00474CB9 /* VoyeurDocument.xib */,
+				53C1B70529B2602200474CB9 /* VoyeurFont.h */,
+				53C1B70629B2602200474CB9 /* VoyeurFont.m */,
+				53C1B70729B2602200474CB9 /* VoyeurNode.h */,
+				53C1B70A29B2602200474CB9 /* VoyeurNode.m */,
+			);
+			name = Voyeur;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53C1B6ED29B25F5400474CB9 /* Voyeur */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53C1B6FE29B25F5500474CB9 /* Build configuration list for PBXNativeTarget "Voyeur" */;
+			buildPhases = (
+				53C1B6EA29B25F5400474CB9 /* Sources */,
+				53C1B6EB29B25F5400474CB9 /* Frameworks */,
+				53C1B6EC29B25F5400474CB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Voyeur;
+			productName = Voyeur;
+			productReference = 53C1B6EE29B25F5400474CB9 /* Voyeur.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53C1B6E629B25F5400474CB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					53C1B6ED29B25F5400474CB9 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 53C1B6E929B25F5400474CB9 /* Build configuration list for PBXProject "Voyeur" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53C1B6E529B25F5400474CB9;
+			productRefGroup = 53C1B6EF29B25F5400474CB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53C1B6ED29B25F5400474CB9 /* Voyeur */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53C1B6EC29B25F5400474CB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C1B6F829B25F5500474CB9 /* MainMenu.xib in Resources */,
+				53C1B71E29B26BDE00474CB9 /* VoyeurDocument.xib in Resources */,
+				53C1B71D29B26BDE00474CB9 /* InfoWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53C1B6EA29B25F5400474CB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C1B70B29B2602300474CB9 /* VoyeurDataSource.m in Sources */,
+				53C1B71229B2633000474CB9 /* InfoWindowController.m in Sources */,
+				53C1B71529B2638E00474CB9 /* FontList.m in Sources */,
+				53C1B70C29B2602300474CB9 /* VoyeurAppKitExtras.m in Sources */,
+				53C1B70F29B2602300474CB9 /* VoyeurNode.m in Sources */,
+				53C1B70E29B2602300474CB9 /* VoyeurFont.m in Sources */,
+				53C1B6FA29B25F5500474CB9 /* main.m in Sources */,
+				53C1B6F329B25F5400474CB9 /* VoyeurApp.m in Sources */,
+				53C1B70D29B2602300474CB9 /* VoyeurDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53C1B6F629B25F5500474CB9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53C1B6F729B25F5500474CB9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		53C1B71929B26BDE00474CB9 /* InfoWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53C1B71A29B26BDE00474CB9 /* Base */,
+			);
+			name = InfoWindowController.xib;
+			sourceTree = "<group>";
+		};
+		53C1B71B29B26BDE00474CB9 /* VoyeurDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53C1B71C29B26BDE00474CB9 /* Base */,
+			);
+			name = VoyeurDocument.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53C1B6FC29B25F5500474CB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		53C1B6FD29B25F5500474CB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		53C1B6FF29B25F5500474CB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Voyeur.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ragfield.Voyeur;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		53C1B70029B25F5500474CB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Voyeur.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ragfield.Voyeur;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53C1B6E929B25F5400474CB9 /* Build configuration list for PBXProject "Voyeur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53C1B6FC29B25F5500474CB9 /* Debug */,
+				53C1B6FD29B25F5500474CB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53C1B6FE29B25F5500474CB9 /* Build configuration list for PBXNativeTarget "Voyeur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53C1B6FF29B25F5500474CB9 /* Debug */,
+				53C1B70029B25F5500474CB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53C1B6E629B25F5400474CB9 /* Project object */;
+}
